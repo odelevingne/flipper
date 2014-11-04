@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class Flipper < Sinatra::Base
   get '/' do
-    'Hello Flipper!'
+    erb :index
   end
 
   # start the server if ruby file executed directly
