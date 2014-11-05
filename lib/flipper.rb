@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'flip'
 
 class Flipper < Sinatra::Base
   get '/' do
