@@ -17,9 +17,33 @@ Then(/^my password and confirmation don't match$/) do
 end
 
 Given(/^another person has already signed up with my email address$/) do
-		User.create(:email => "ollie@ollie.com",
-	              :name => "Ollie",
-	              :password => "password",
-	              :password_confirmation => "password")
+		create_user
 end
 
+Given(/^I sign in$/) do
+		create_user
+		sign_in("ollie@ollie.com", "passwordtest")
+end
+
+Given(/^I am a preregistered user$/) do
+end
+
+Given(/^I sign in with the wrong password$/) do
+	create_user
+	sign_in("ollie@ollie.com", "wrong")
+end
+
+
+def create_user
+		@user = User.create(:email => "ollie@ollie.com",
+				              :name => "Ollie",
+				              :password => "password",
+				              :password_confirmation => "password")
+end
+
+def sign_in(email, password)
+		visit('/sessions/new')
+		fill_in :email, :with => email
+		fill_in :password, :with => password
+		click_on 'sign-in'
+end
