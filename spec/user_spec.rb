@@ -7,16 +7,13 @@ describe 'User' do
     User.create(:email => "ollie@ollie.com",
                 :name => "Ollie",
                 :password => "password",
-                :password_confirmation => "password1")
+                :password_confirmation => "password")
   end
 
-
-	it 'is created with an email address' do
+	it 'is created with the necessary fields' do
 		expect(user.email).to eq 'ollie@ollie.com'
-	end
-
-	it 'is created with a name' do
 		expect(user.name).to eq 'Ollie'
+		expect(User.count).to eq 1
 	end
 
 	def user
