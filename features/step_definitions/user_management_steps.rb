@@ -5,5 +5,6 @@ end
 Then(/^I sign up as "(.*?)"$/) do |arg1|
 	fill_in :name, :with => "Oliver"
 	fill_in :email, :with => "ollie@ollie.com"
+	fill_in :password, :with => "passwordtest"
 end
 
