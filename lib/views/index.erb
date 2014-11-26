@@ -5,15 +5,24 @@
 	</head>
 
 	<body>
+		
+		<div id="new-flip">
+			<form action='/' method="POST">
+				Flip: <input type="text" name="flip">
+				<button type="submit">Flip!</button>
+			</form>
+		</div>
 
-	<% if @flips.any? %>
-		<% @flips.each do |flip| %>
-					<li><%= flip.content %><br/>
-						<%= flip.created_at %></li>
+		<div id="flip-list">
+			<% if @flips.any? %>
+				<% @flips.each do |flip| %>
+							<li><%= flip.content %><br/>
+								<%= flip.created_at %></li>
+					<% end %>
+			<% else %>
+					<h1>No-one's Flipped!</h1>
 			<% end %>
-	<% else %>
-			<h1>No-one's Flipped!</h1>
-	<% end %>
+		</div>
 
 </body>
 </html>

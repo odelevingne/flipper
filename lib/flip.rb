@@ -4,6 +4,6 @@ class Flip
 
 	property :id, 					Serial
 	property :content, 			Text
-	property :created_at, 	DateTime
+	property :created_at, 	String
 
 end
