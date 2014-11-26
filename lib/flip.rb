@@ -1,9 +1,9 @@
 class Flip
 
-	attr_reader :content
+	include DataMapper::Resource
 
-	def initialize(options)
-		@content = options[:content]
-	end
+	property :id, 					Serial
+	property :content, 			Text
+	property :created_at, 	DateTime
 
 end
