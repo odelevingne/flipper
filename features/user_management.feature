@@ -1,7 +1,7 @@
-Feature: User Management
+Feature: Signing Up
 				In order to use the website
-				As an user
-				I have to be able to sign up and log in
+				As a user
+				I have to be able to sign up
 
 Scenario: Signing up
 				Given I am on the homepage
@@ -23,3 +23,4 @@ Scenario: Signing up with an email that is already taken
 				And I visit the Sign Up page
 				And I sign up as "Oliver"
 				Then I should not see "Welcome Oliver!"
+
