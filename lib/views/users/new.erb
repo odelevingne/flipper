@@ -1,9 +1,15 @@
+
+<% if flash[:notice] %>
+  <div id="notice"><%= flash[:notice] %></div>
+<% end %>
+
 <div id="new-user-form">
 	<form action="/users/new" method="POST">
 		Please fill in your details: <br>
 		<input type='text' name='name' placeholder='Your name'><br>
-		<input type='text' name='email' placeholder='Email Address'><br>
+		<input type='text' name='email' placeholder='<%= @user.email %>'><br>
 		<input type='password' name='password' placeholder='Password'><br>
+		<input type='password' name='password_confirmation' placeholder='Confirm Password'><br>
 		<button type='submit'>Sign Up</button>
 	</form>
 </div>

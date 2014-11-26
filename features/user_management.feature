@@ -16,4 +16,6 @@ Scenario: Signing up with a password that doesn't match
 				When I press "Sign Up"
 				Then I visit the Sign Up page
 				And my password and confirmation don't match
-				Then I should see "Sorry, your passwords don't match"
+				And I press "Sign Up"
+				Then I visit the Sign Up page
+				And I should see "Sorry, your passwords don't match"

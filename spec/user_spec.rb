@@ -6,7 +6,8 @@ describe 'User' do
 	before(:each) do
     User.create(:email => "ollie@ollie.com",
                 :name => "Ollie",
-                :password => "password")
+                :password => "password",
+                :password_confirmation => "password1")
   end
 
 
