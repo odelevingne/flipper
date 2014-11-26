@@ -12,4 +12,5 @@ Scenario: One user has Flipped
 				Given I am on the homepage
 				And one user has Flipped
 				Then I should see "Argh!!! Too many cucs!"
+				And I should not see "No-one's Flipped!"
 				

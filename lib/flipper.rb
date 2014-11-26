@@ -8,7 +8,9 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 class Flipper < Sinatra::Base
+
   get '/' do
+  	@flips = Flip.all
     erb :index
   end
 

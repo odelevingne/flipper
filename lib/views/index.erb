@@ -1,12 +1,19 @@
 <!DOCTYPE	html>
 <html>
-<head>
-	<title>Flipper!</title>
-</head>
+	<head>
+		<title>Flipper!</title>
+	</head>
 
-<body>
+	<body>
 
-	<h1>No-one's Flipped!</h1>
+	<% if @flips.any? %>
+		<% @flips.each do |flip| %>
+					<li><%= flip.content %><br/>
+						<%= flip.created_at %></li>
+			<% end %>
+	<% else %>
+			<h1>No-one's Flipped!</h1>
+	<% end %>
 
 </body>
 </html>
