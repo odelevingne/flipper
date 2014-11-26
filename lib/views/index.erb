@@ -8,6 +8,10 @@
 
 		<% if current_user %>
 			Welcome <%= current_user.name %>!
+			<form method="post" action="/sessions">
+     	 	<input type="hidden" name="_method" value="delete">
+      	<input type="submit" value="Log Out">
+    	</form>
 		<% else %>
 			<div id="sign-up-button">
 				<form action="/users/new">

@@ -21,24 +21,23 @@ Given(/^another person has already signed up with my email address$/) do
 end
 
 Given(/^I sign in$/) do
-		create_user
-		sign_in("ollie@ollie.com", "passwordtest")
-end
-
-Given(/^I am a preregistered user$/) do
+		sign_in("ollie@ollie.com", "password")
+		puts User.count
 end
 
 Given(/^I sign in with the wrong password$/) do
-	create_user
 	sign_in("ollie@ollie.com", "wrong")
 end
 
+Given(/^I've signed up$/) do
+	create_user	
+end
 
 def create_user
-		@user = User.create(:email => "ollie@ollie.com",
-				              :name => "Ollie",
-				              :password => "password",
-				              :password_confirmation => "password")
+	User.create(:email => "ollie@ollie.com",
+            	:name => "Ollie",
+            	:password => "password",
+            	:password_confirmation => "password")
 end
 
 def sign_in(email, password)
