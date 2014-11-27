@@ -61,7 +61,11 @@ class Flipper < Sinatra::Base
     erb :"sessions/new"
   	end
 	end
-  
 
+	post '/sessions/delete' do
+	  session[:user_id] = nil
+	  redirect to('/')
+end
+  
   run! if app_file == $0
 end
