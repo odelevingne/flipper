@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'data_mapper'
 require 'rack-flash'
+require 'json'
 
 require_relative './flip.rb'
 require_relative './user.rb'
@@ -23,8 +24,12 @@ class Flipper < Sinatra::Base
   end
 
   post '/' do
-  	Flip.create(content: params["flip"], created_at: params[Time.now])
-  	redirect to('/')
+    if current_user
+  	   Flip.create(content: params["flip"], created_at: params[Time.now], user: @current_user)
+  	   redirect to('/')
+    else
+      redirect to('/sessions/new')
+    end
   end
 
   get '/users/new' do

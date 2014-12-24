@@ -15,6 +15,8 @@ class User
 		property :email, 					String, :unique => false, :message => "This email is already taken"
 		property :password_digest, 	Text
 
+		has n, :flips
+
 	  def password=(password)
 	    @password = password
 	    self.password_digest = BCrypt::Password.create(password)

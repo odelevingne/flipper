@@ -34,7 +34,7 @@ Given(/^I've signed up$/) do
 end
 
 def create_user
-	User.create(:email => "ollie@ollie.com",
+	@user =User.create(:email => "ollie@ollie.com",
             	:name => "Ollie",
             	:password => "password",
             	:password_confirmation => "password")

@@ -3,6 +3,10 @@ Feature: Posting A Flip
 				As a user
 				I should fill out the form and see the Flip on the homepage
 
+Background:
+				Given I've signed up
+				And I sign in
+
 Scenario: Adding a Flip
 				Given I am on the homepage
 				When I fill in "flip" with "I'm so ANGRY!"

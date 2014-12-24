@@ -19,5 +19,5 @@ Scenario: Signing in with incorrect information
 Scenario: Signing out
 				Given I sign in
 				And I am on the homepage
-				Then I press "Log Out"
+				Then I press "Sign Out"
 				And I should not see "Welcome Ollie!"

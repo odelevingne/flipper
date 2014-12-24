@@ -6,4 +6,6 @@ class Flip
 	property :content, 			Text
 	property :created_at, 	String
 
+	belongs_to :user
+
 end
