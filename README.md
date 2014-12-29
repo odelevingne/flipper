@@ -1,17 +1,18 @@
-Chitter
+Flipper!
 =======
 ##### End of Week 6 project at Makers Academy
 =======
 
-Chitter is a little Twitter clone that will allow users to cheep (post messages) to a public stream.
+Flipper is a little Twitter clone that will allow users to flip (post messages) to a public stream.
+People are always venting on Twitter, so my version is called Flipper, a place for people to mindlessly Flip out. 
 
 Features:
 
-  - In order to use chitter as a maker I want to sign up to the service
-  - In order to user chitter as a maker I want to log in
+  - In order to use flipper as a maker I want to sign up to the service
+  - In order to user flipper as a maker I want to log in
   - In order to avoid others to use my account as a maker I want to log out
-  - In order to let people know what I am doing as a maker I want to post a message(cheep) to chitter
-  - In order to see what people have to say as a maker I want to see all cheeps in chronological order
+  - In order to let people know what I am doing as a maker I want to post a message(flip) to flipper
+  - In order to see what people have to say as a maker I want to see all flips in chronological order
 
 Technologies used
 ----
