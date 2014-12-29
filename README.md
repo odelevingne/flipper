@@ -27,3 +27,18 @@ Technologies used
 - Bcrypt
 - Datamapper
 
+How to run it
+----
+```sh
+git clone https://github.com/odelevingne/flipper
+cd flipper/lib
+shotgun -p 3000 flipper.rb
+```
+open localhost:3000 in your browser
+
+How to run tests
+----
+```sh
+cd flipper
+cucumber
+```
