@@ -15,7 +15,7 @@ Learning Objectives:
 ----
   - The aim of this task was to help get to grips with Sinatra, Datamapper and Cucumber
 
-Technologies used
+Technologies used:
 ----
 - Ruby
 - Sinatra
