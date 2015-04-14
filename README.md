@@ -12,6 +12,7 @@ Features:
   - In order to see what people have to say as a maker I want to see all flips in chronological order
    
 Learning Objectives:
+----
   - The aim of this task was to help get to grips with Sinatra, Datamapper and Cucumber
 
 Technologies used
