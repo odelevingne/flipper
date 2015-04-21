@@ -1,5 +1,5 @@
-require 'flip'
-require 'user'
+require_relative '../app/flip'
+require_relative '../app/user'
 
 describe 'A Flip:' do
 

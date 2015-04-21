@@ -1,4 +1,4 @@
-require 'user'
+require_relative '../app/user'
 require 'spec_helper'
 
 describe 'User' do

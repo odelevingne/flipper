@@ -1,5 +1,5 @@
 ENV["RACK_ENV"] = 'test'
-require 'flipper.rb'
+require_relative '../app/flipper'
 require 'database_cleaner'
 
 RSpec.configure do |config|
