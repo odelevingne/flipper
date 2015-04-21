@@ -37,10 +37,14 @@
 
 		<div id="flip-list">
 			<% if @flips.any? %>
-				<% @flips.each do |flip| %>
-							<li><%= flip.content %><br/>
-								<%= flip.created_at %></li>
+				<ul>
+				<% @flips.reverse.each do |flip| %>
+							<li><%= flip.content %></li>
+							<li><%= flip.created_at %></li>
+							<li>Flipped by: <%= flip.user %></li>
+							<br>
 					<% end %>
+				</ul>	
 			<% else %>
 					<h1>No-one's Flipped!</h1>
 			<% end %>
