@@ -1,5 +1,5 @@
-require_relative '../app/flip'
-require_relative '../app/user'
+require_relative '../app/models/flip'
+require_relative '../app/models/user'
 
 describe 'A Flip:' do
 

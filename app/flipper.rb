@@ -3,14 +3,15 @@ require 'data_mapper'
 require 'rack-flash'
 require 'json'
 
-require_relative './flip.rb'
-require_relative './user.rb'
-require_relative './helpers/application'
+require_relative 'helpers/application'
 
-env = ENV["RACK_ENV"] || "development"
-DataMapper.setup(:default, "postgres://localhost/flipper_#{env}")
-DataMapper.finalize
-DataMapper.auto_upgrade!
+require_relative 'data_mapper_setup'
+
+# require_relative 'controllers/application'
+# require_relative 'controllers/flips'
+# require_relative 'controllers/sessions'
+# require_relative 'controllers/users'
+
 
 class Flipper < Sinatra::Base
 

@@ -1,4 +1,4 @@
-require_relative '../app/user'
+require_relative '../app/models/user'
 require 'spec_helper'
 
 describe 'User' do
